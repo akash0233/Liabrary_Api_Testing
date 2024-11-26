@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "7f3043c4-39a8-4bef-9563-18a3f2ce6ca5",
-		"name": "Library Copy",
+		"_postman_id": "42cffa66-fb51-4ad9-ab6f-31d9be509b3e",
+		"name": "Library Copy 2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32434907"
 	},
@@ -115,6 +115,10 @@
 							"    pm.response.to.have.jsonSchema(schema)\r",
 							"});\r",
 							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript",
@@ -158,6 +162,10 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
 						"type": "text/javascript",
